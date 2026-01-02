@@ -1,0 +1,14 @@
+[project]
+name = "mojo-redis"
+version = "0.1.0"
+description = "Pure Mojo Redis client with RESP protocol support"
+authors = ["IDEA2CODE"]
+channels = ["conda-forge", "modular"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tasks]
+build = "mojo build src -o lib/mojo_redis.mojopkg"
+test = "mojo run tests/test_redis.mojo"
+
+[dependencies]
+max = ">=24.6,<25"
